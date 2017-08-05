@@ -3,7 +3,7 @@ package cs143;
 /**
  * This class represents a generic node in a doubly linked list.
  * 
- * @author Linda Zuvich
+ * @author dlshle@hotmail.com 
  */
 public class Node<E> {
     
