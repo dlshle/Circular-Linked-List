@@ -6,10 +6,7 @@ import java.util.Iterator;
  * This data class represents an ordered collection in an endless circular list.
  *
  * @param <E> the type of values stored in the list
- * @author
- * @author
- * @author
- * @author
+ * @author dlshle@hotmail.com
  */
 public class EndlessList<E> implements Iterable<E> {
 
@@ -200,7 +197,7 @@ public class EndlessList<E> implements Iterable<E> {
     private class EndlessListIterator implements Iterator<E> {
 
         //fields
-        private final Node START = cursor;
+        private Node start = cursor;
         private boolean handledStart = false;
         
 
@@ -216,7 +213,7 @@ public class EndlessList<E> implements Iterable<E> {
             if (cursor == null) {
                 return false;
             }
-            if (handledStart && START == cursor) {
+            if (handledStart && start == cursor) {
                 handledStart = false;
                 return false;
             } else {
