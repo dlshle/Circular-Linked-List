@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Node.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;Project3&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">cs143</a> &gt; <span class="el_source">Node.java</span></div><h1>Node.java</h1><pre class="source lang-java linenums">package cs143;
+
+/**
+ * This class represents a generic node in a doubly linked list.
+ * 
+ * @author Linda Zuvich
+ */
+public class Node&lt;E&gt; {
+    
+    //fields
+    private Node prev;
+    private Node next;
+    private E value;
+    
+    /**
+     * Constructor that sets prev and next to null.
+     * 
+     * @param value the value to enter in this node
+     */
+<span class="fc" id="L20">    public Node(E value) {</span>
+<span class="fc" id="L21">        this.value = value;</span>
+<span class="fc" id="L22">    }</span>
+    
+    /**
+     * Full constructor.
+     * 
+     * @param value the value to enter in this node
+     * @param prev the node just before this one
+     * @param next the node just after this one
+     */
+    public Node(E value, Node prev, Node next) {
+<span class="fc" id="L32">        this(value);</span>
+<span class="fc" id="L33">        this.prev = prev;</span>
+<span class="fc" id="L34">        this.next = next;</span>
+<span class="fc" id="L35">    }</span>
+
+    /**
+     * Provides access to the previous node.
+     * 
+     * @return the previous node
+     */
+    public Node getPrev() {
+<span class="fc" id="L43">        return prev;</span>
+    }
+
+    /**
+     * Allows the previous node to be set.
+     * 
+     * @param prev the previous node 
+     */
+    public void setPrev(Node prev) {
+<span class="fc" id="L52">        this.prev = prev;</span>
+<span class="fc" id="L53">    }</span>
+
+    /**
+     * Provides access to the next node.
+     * 
+     * @return the next node
+     */
+    public Node getNext() {
+<span class="fc" id="L61">        return next;</span>
+    }
+
+    /**
+     * Allows the next node to be set.
+     * 
+     * @param next the next node
+     */
+    public void setNext(Node next) {
+<span class="fc" id="L70">        this.next = next;</span>
+<span class="fc" id="L71">    }</span>
+
+    /**
+     * Provides access to the value stored in this node
+     * 
+     * @return the value
+     */
+    public E getValue() {
+<span class="fc" id="L79">        return value;</span>
+    }
+
+    /**
+     * Allows the value stored in this node to be set.
+     * 
+     * @param value the value
+     */
+    public void setValue(E value) {
+<span class="fc" id="L88">        this.value = value;</span>
+<span class="fc" id="L89">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
